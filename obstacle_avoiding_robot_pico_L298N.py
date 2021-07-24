@@ -1,5 +1,5 @@
-import machine, utime
-from machine import Pin
+import utime
+from machine import Pin, time_pulse_us
 
 motor_a1 = Pin(0, Pin.OUT)
 motor_a2 = Pin(1, Pin.OUT)
@@ -19,7 +19,7 @@ def get_distance():
   utime.sleep(0.05)
   trigger.value(0)
   
-  pulse_time = machine.time_pulse_us(echo, 1, echo_timeout)
+  pulse_time = time_pulse_us(echo, 1, echo_timeout)
   cms = (pulse_time / 2) / 29.1
   if cms > 0:
       return cms
@@ -55,9 +55,9 @@ while True:
   if distance <= 15 and distance != -1:
       print("obstacle ahead. turning back and taking right!")
       back()
-      utime.sleep(0.5)
+      utime.sleep(0.1)
       right()
-      utime.sleep(0.5)
+      utime.sleep(0.1)
   else:
       print("forward")
       forward()
