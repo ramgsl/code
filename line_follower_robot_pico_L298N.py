@@ -1,8 +1,8 @@
 import utime
 from machine import Pin
 
-left_sensor_pin = Pin(16, Pin.IN)
-right_sensor_pin = Pin(17, Pin.IN)
+left_sensor_pin = Pin(15, Pin.IN)
+right_sensor_pin = Pin(14, Pin.IN)
 
 motor_a1 = Pin(0, Pin.OUT)
 motor_a2 = Pin(1, Pin.OUT)
@@ -59,4 +59,4 @@ while True:
     if right_sensor_state == 0 and left_sensor_state == 0:
         print("forward")
         forward()
-    utime.sleep(0.01)
+    utime.sleep_ms(5)
