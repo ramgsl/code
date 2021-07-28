@@ -11,7 +11,7 @@ trigger = Pin(15, mode=Pin.OUT, pull=None)
 
 
 def get_distance():
-    echo_timeout=3000
+    echo_timeout = 3000
     trigger.value(0)
 
     utime.sleep(0.05)
