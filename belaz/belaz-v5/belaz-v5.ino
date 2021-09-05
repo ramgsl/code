@@ -78,8 +78,8 @@ void setup() {
   pinMode(motor_fe, OUTPUT);
   pinMode(motor_re, OUTPUT);
   
-  analogWrite(motor_fe, 150);
-  analogWrite(motor_re, 150);  
+  analogWrite(motor_fe, 200);
+  analogWrite(motor_re, 200);  
 
   pinMode(RC_CH1_INPUT, INPUT);
   pinMode(RC_CH2_INPUT, INPUT);
