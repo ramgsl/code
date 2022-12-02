@@ -12,9 +12,9 @@ int open_pin = 0;
 int close_pin_status = 2;
 int open_pin_status = 2;
 
-char ssid[] = "DarKnight";
-char pass[] = "JonnyDepp@pirates#4";
-char auth[] = "gINvOrQpcH4bTOOmDmXFF9XuIfJQtsBn";
+char ssid[] = "<<your_wifi_ssid>>";
+char pass[] = "<<your_wifi_password>>";
+char auth[] = "<<blynk_auth_token>>";
 
 void setup(){
   Serial.begin(57600);
